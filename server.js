@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 // Set port
-var port = process.env.PORT || 5000;        // set the port
+var port = process.env.PORT || 8080;        // set the port
 
 // Define a prefix for all routes
 // Can define something unique like MyRestAPI
