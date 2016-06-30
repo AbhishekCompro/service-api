@@ -6,7 +6,13 @@ var routes     = require('./routes');
 const config = require("./config");
 
 var mongoose = require("mongoose");
-mongoose.connect(config.mongoconnect);
+
+try{
+    mongoose.connect(config.mongoconnect);
+}catch(er){
+    console.log("Mongo error" + er);
+}
+
 
 // Express app will use body-parser to get data from POST
 app.use(bodyParser.urlencoded({ extended: true }));
